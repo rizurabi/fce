@@ -27,10 +27,10 @@ body {
 /* Move just the H1 slightly to the left */
 .hero-text .boxed-header {
     display: inline-block;
-    margin-left: -35px; /* adjust this value to move more or less left */
+    margin-left: -42px; /* adjust this value to move more or less left */
 }
 .hero-subtext {
-    margin-left: -40px; /* move left */
+    margin-left: -70px; /* move left */
 }
 
 
@@ -56,6 +56,7 @@ body {
 /* BUTTONS */
 .hero-buttons {
     margin-top: 20px;
+    margin-left: 20px
 }
 
 button {
@@ -63,8 +64,7 @@ button {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    margin-right: 15px;
-    margin-left: 30px;
+    margin-right: 30px
 }
 
 #learn-more, #contact-us {
@@ -81,12 +81,12 @@ button {
 .call-btn {
     background: #e2aa57;
     color: rgb(255, 255, 255);
-    padding: 15px 40px;
+    padding: 15px 37px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 19px;
 }
 
 .call-btn:hover {
