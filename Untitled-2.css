@@ -1,0 +1,221 @@
+/* GENERAL STYLE */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #ffffff;
+    color: #1b1b1b;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    background: #325296;
+    color: white;
+    padding: 60px 10%;
+    flex-wrap: wrap; /* responsive stacking */
+}
+
+.hero-text {
+    max-width: 50%;
+    text-align: left;
+     margin-left: 235px; /* adjust this value to move more or less left */
+}
+/* Move just the H1 slightly to the left */
+.hero-text .boxed-header {
+    display: inline-block;
+    margin-left: -35px; /* adjust this value to move more or less left */
+}
+.hero-subtext {
+    margin-left: -40px; /* move left */
+}
+
+
+.hero-img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* BOXED HEADERS */
+.boxed-header {
+    display: inline-block;
+    background: #325296;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 26px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 30px;
+}
+
+#learn-more, #contact-us {
+    background: #e2aa57;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+/* CALL BUTTON */
+.call-section {
+    margin-top: 15px;
+}
+
+.call-btn {
+    background: #e2aa57;
+    color: rgb(255, 255, 255);
+    padding: 15px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.call-btn:hover {
+    background: #d89c45;
+    transform: scale(1.05);
+}
+
+/* SERVICES */
+.services {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: nowrap;
+}
+
+.service-card {
+    background: #ffd885;
+    padding: 25px;
+    width: 30%;
+    border-radius: 18px;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* MAP & CONTACT WITH GREYED BACKGROUND */
+.map-section, .contact {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 70px 8%;
+    z-index: 1;
+    border-radius: 18px;
+}
+
+/* Background images */
+.map-section {
+    background: url('Pictures/IMG_2757_VSCO.jpeg') center/cover no-repeat;
+}
+
+.contact {
+    background: url('Pictures/contact-bg.jpg') center/cover no-repeat;
+}
+
+/* Grey overlay */
+.map-section::before,
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 128, 128, 0.5);
+    z-index: 0;
+    border-radius: 18px;
+}
+
+/* Make content appear above overlay */
+.map-section > *, .contact > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* MAP IFRAME */
+.map {
+    width: 100%;
+    height: 400px;
+    border-radius: 18px;
+}
+
+/* LOADING SCREEN */
+#loading-screen {
+    position: fixed;
+    background: white;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CHAT BUTTON */
+#chat-button {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    background: #0c2d91;
+    color: white;
+    font-size: 28px;
+    padding: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE HERO */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero-img {
+        max-width: 100%;
+    }
+    .hero-img {
+        margin-top: 30px;
+    }
+}
